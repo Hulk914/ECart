@@ -1,0 +1,20 @@
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>
+      <i class="fa fa-cart-plus"></i> E-Cart</h1>
+    <p>Buy What you need!!</p>
+    <p *ngIf="cartCount > 0">{{cartCount}} item(s) added to your cart</p>
+  </div>
+  <div class="col-lg-4 col-sm-6 float-left" *ngFor='let product of productList'>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{product.imageUrl}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text">Price: INR {{product.price}}</p>
+        <button type="button" [disabled]="!product.enabled" (click)="addToCart(product)" class="btn btn-outline-primary card-link">Add to cart</button>
+        <button type="button" [disabled]="product.enabled" (click)="removeCart(product)" class="btn btn btn-outline-danger card-link">Remove</button>
+      </div>
+    </div>
+  </div>
+</div>
