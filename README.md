@@ -17,8 +17,11 @@ The backend is created using nodeJS and express framework. Follow the steps ment
 
 # UI
 -> The UI runs on port 4200.<br>
+-> go to Frontend/neutrino and give command ng serve.<br>
 -> On clicking the add to cart the count of items in cart will be displayed on the top in the jumbotron. If the items are 0 then nothing will be displayed.<br>
 -> The remove button will remove the entry from the carts collection and decrement the count of items in cart.<br>
 -> if item is added once, it will be disabled and remove will be enabled.<br>
--> if item is removed then the removed button is disabled and add is enabled.
--> random image will be obtained from lorem picsum.
+-> if item is removed then the removed button is disabled and add is enabled.<br>
+-> random image will be obtained from lorem picsum.<br>
+
+Note: Do npm install to get dependencies from package.json
